@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pokemon GO/INFO</title>
+    <link rel="stylesheet" type="text/css" href="../Pages CSS/QuizStyle.css">
+    <link rel="stylesheet" type="text/css" href="../style/modal_boxes.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../script/notify.js"></script>
+</head>
+<body>
+<div id="wrapper_outer">
+    <div id="wrapper_inner">
+
+        <div id="header">
+
+            <div id="site_title">
+                <br><br><br>
+                   <span style="color:#fbca04">Everything you gotta know about</span>
+            </div>
+        </div>
+        <div id="menu">
+
+            <ul>
+                <li><a href="layout_pokemon.html">Home</a></li>
+                <li><a href="Info.html">Info</a></li>
+                <li><a href="Forum.html">Forum</a></li>
+                <li><a href="Quiz.html" class="current">Quiz</a></li>
+                <li><a href="TheDangers.html">The dangers..</a></li>
+                <li><a href="Explore.html">Explore</a></li>
+                <li><a href="Pokedex.html">Pokedex</a></li>
+                <li><a href="TeamsAndGyms.html">Teams and gyms</a></li>
+                <li><a href="#" class="open_modal">Login</a></li>
+                <li><a href="#" id="clicked" class="open_modal">Register</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="login_modal" class="modal">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <span class="close">X</span>
+                    <h3>Login information</h3>
+                </div>
+
+                <div class="modal_body">
+                    <form method="post">
+                        <label class="label" for="login_username">Username:</label>
+                        <input type="text" name="login_username" id="login_username" placeholder="Username"><br>
+                        <label class="label" for="login_password">Password:</label>
+                        <input type="password" name="login_password" id="login_password" placeholder="Password"><br>
+                        <input type="submit" value="Login">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <?php require_once("login_test.php"); ?>
+
+        <!-- Register Modal-->
+        <div id="register_modal" class="modal">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <span class="close">X</span>
+                    <h3>Register information</h3>
+                </div>
+
+                <div class="modal_body">
+                    <form method="post" id="register_form">
+                        <div class="register_menu_item">
+                            <label class="label" for="username">Username:</label><br>
+                            <input type="text" name="username" id="register_username" placeholder="Username"/>
+                        </div>
+                        <div class="register_menu_item">
+                            <label class="label" for="email">Email:</label><br>
+                            <input type="text" name="email" id="register_email" placeholder="Email"/>
+                        </div>
+
+                        <div class="register_menu_item">
+                            <label class="label" for="password">Password:</label><br>
+                            <input type="password" name="password" id="register_password" placeholder="Password"/>
+                        </div>
+                        <div class="register_menu_item">
+                            <label class="label" for="confirm_password">Confirm Password:</label><br>
+                            <input type="password" name="confirm_password" id="register_confirm_password" placeholder="Confirm password"/>
+                        </div>
+
+                        <div class="register_menu_item">
+                            <label class="label" for="full_name">Full Name:</label><br>
+                            <input type="text" name="full_name" id="register_fullname" placeholder="Full Name"/>
+                        </div>
+                        <div class="register_menu_item">
+                            <input id="register_submit" type="submit" value="Register"><br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <?php>
+<div id="content">
+        <span style="font-family:Cursive;
+        font-size:18px;
+        font-style:normal;
+        font-weight:normal;
+        color:white;">
+            <br>
+            <p>Curious what type would you be if you were a Pokemon? Find out here! This quiz features all 17 types and nearly 300
+                different results! When you're done, you can grab a personalized signature banner to show off your result! What are you waiting for?
+                Enter your name, and get started!</p><br><br>
+                <hr>
+                <br>
+                <form name="quiz" method="post">
+                Name: <input type="text" size="12" name="name">
+                <br>
+                <table width = "100%"><tr><td width="5%"></td><td>
+                <ol>
+                <li>
+                <b>Let's start simple- What's your favorite color out of these?</b><br />
+                <input type="radio" name="q1" value="2" /> Red. <br/>
+                <input type="radio" name="q1" value="4" /> Yellow! <br/>
+                <input type="radio" name="q1" value="5" /> Green. <br/>
+                <input type="radio" name="q1" value="3" /> Blue... <br/>
+                <input type="radio" name="q1" value="9" /> Orange. <br/>
+                <input type="radio" name="q1" value="11" /> Purple. <br/>
+                <input type="radio" name="q1" value="16" /> Black. <br/>
+                <input type="radio" name="q1" value="1" /> White. <br/>
+                </li><br />
+                <li>
+                <b>What kind of weather do you find most appealing?</b><br />
+                <input type="radio" name="q2" value="2" /> I like it when it's nice and sunny out! <br />
+                <input type="radio" name="q2" value="3" /> The rain is very comforting... <br />
+                <input type="radio" name="q2" value="13" /> Sandstorm isn't really a normal 'weather', but if it was, it would be awesome. <br />
+                <input type="radio" name="q2" value="6" /> Snow is so pretty... And fun to play in~ <br />
+                <input type="radio" name="q2" value="14" /> Overcast is very relaxing. <br />
+                <input type="radio" name="q2" value="10" /> I love it when it's really windy! <br />
+                <input type="radio" name="q2" value="15" /> ...............................Rainbows. Rainbows everywhere. <br />
+                <input type="radio" name="q2" value="17" /> I don't have a favorite weather. <br />
+                </li><br />
+                <li>
+                <b>What is your idea of "Success"?</b><br />
+                <input type="radio" name="q3" value="15" /> Having lots of really good friends! <br />
+                <input type="radio" name="q3" value="7" /> A stable, progressive and gainful career. <br />
+                <input type="radio" name="q3" value="8" /> Wealth. <br />
+                <input type="radio" name="q3" value="3" /> Find one's true love. <br />
+                <input type="radio" name="q3" value="4" /> To be famous! <br />
+                <input type="radio" name="q3" value="12" /> I consider the pinnacle of success to be enlightenment and the acquisition of knowledge. <br />
+                <input type="radio" name="q3" value="11" /> Prestige, reputation and respectability. <br />
+                <input type="radio" name="q3" value="1" /> Anything, as long as you're happy. <br />
+                </li><br />
+
+                <li>
+                <b>What are you most afraid of?</b><br />
+                <input type="radio" name="q4" value="9" /> I'm not afraid of anything. <br />
+                <input type="radio" name="q4" value="10" /> ...Rejection. <br />
+                <input type="radio" name="q4" value="11" /> Bugs... okay? I said it. Bugs are gross. <br />
+                <input type="radio" name="q4" value="15" /> I'm okay with heights and the dark and all that but there are some really trivial random things that just terrify me and no one else... <br />
+                <input type="radio" name="q4" value="13" /> I'm afraid of losing those close to me. <br />
+                <input type="radio" name="q4" value="12" /> ...I'd rather not say. <br />
+                <input type="radio" name="q4" value="2" /> My fears are kinda childish... I try not to admit them, even to myself. <br />
+                <input type="radio" name="q4" value="16" /> ...Myself. <br />
+                </li><br />
+                <li>
+                <b>Which of these best describes you?</b><br />
+                <input type="radio" name="q5" value="1" /> I sometimes feel really lonely. <br />
+                <input type="radio" name="q5" value="10" /> I'm always trying to escape from things... <br />
+                <input type="radio" name="q5" value="6" /> I hardly know who I am. <br />
+                <input type="radio" name="q5" value="8" /> ...Everyone hates me. <br />
+                <input type="radio" name="q5" value="14" /> I end up regretting a lot of things. <br />
+                <input type="radio" name="q5" value="11" /> I don't feel that I'm good enough at anything. <br />
+                <input type="radio" name="q5" value="12" /> Most people just ignore me... <br />
+                <input type="radio" name="q5" value="17" /> Seems like I'm living the wrong life. This isn't what I want. <br />
+                </li><br />
+                <li>
+                <b>How do you feel about relationships?</b><br />
+                <input type="radio" name="q6" value="4" /> I feel like I need to be in one all the time, or I'm not worthy D: <br />
+                <input type="radio" name="q6" value="14" /> Relationships schmationships. <br />
+                <input type="radio" name="q6" value="8" /> I usually just try to avoid them... better not go there. <br />
+                <input type="radio" name="q6" value="7" /> They're nice, I guess, but not necessary. <br />
+                <input type="radio" name="q6" value="16" /> ...I do better alone. <br />
+                <input type="radio" name="q6" value="5" /> I really feel like they add a lot to a person's life. <br />
+                <input type="radio" name="q6" value="12" /> ...Relationships... thanks for reminding me. ._. <br />
+                <input type="radio" name="q6" value="3" /> If they happen, I'll go with it. If not, I'm perfectly fine. <br />
+                </li><br />
+                <li>
+                <b>What's your ideal partner like?</b><br />
+                <input type="radio" name="q7" value="10" /> Someone very down-to-earth, who can keep things under control even if I'm going crazy. <br />
+                <input type="radio" name="q7" value="16" /> I think the people who are like... hopeless romantics, are pretty cute... <br />
+                <input type="radio" name="q7" value="17" /> Conventional ideas of love are outdated. I'm only looking for someone who isn't weighed down by them. <br />
+                <input type="radio" name="q7" value="15" /> ...I tend to really like the 'bad-ass' sorts of people... Is that bad? <br />
+                <input type="radio" name="q7" value="7" /> Someone rational, calm, and who will listen to me. <br />
+                <input type="radio" name="q7" value="13" /> ...I prefer people who are direct, and tell me how to be with them. <br />
+                <input type="radio" name="q7" value="6" /> ...Well, I end up being drawn to very insecure people... <br />
+                <input type="radio" name="q7" value="9" /> I like the people who dream big, and aren't afraid to chase after it. <br />
+                </li><br />
+                <li>
+                <b>What are your ideal friends like?</b><br />
+                <input type="radio" name="q8" value="4" /> My ideal friends would always be there for me, no matter what! We'd never have to be apart. <br />
+                <input type="radio" name="q8" value="1" /> They're around when needed, I guess? <br />
+                <input type="radio" name="q8" value="2" /> I do like people to talk to me often, but they don't need to cling. <br />
+                <input type="radio" name="q8" value="9" /> Just people to hang out with whenever I feel like it. <br />
+                <input type="radio" name="q8" value="15" /> ...Thinking about it, my friends would probably be like in an anime. Loud, dramatic, and likely to blow something up! Sounds fun~ <br />
+                <input type="radio" name="q8" value="3" /> I just need one or two really close friends. We'd know everything about each other. <br />
+                <input type="radio" name="q8" value="4" /> I really enjoy having a wide circle of friends and acquaintances! <br />
+                <input type="radio" name="q8" value="16" /> Ideally? I won't have any friends. <br />
+                </li><br />
+                <li>
+                <b>How do those compare to your real friends? </b><br />
+                <input type="radio" name="q9" value="7" /> My real friends are usually out of control, or don't know when to calm down. <br />
+                <input type="radio" name="q9" value="2" /> My real friends and I don't really see eye-to-eye on a lot of things... <br />
+                <input type="radio" name="q9" value="1" /> I'm content with my real friends. <br />
+                <input type="radio" name="q9" value="6" /> ...I barely see my real friends :x <br />
+                <input type="radio" name="q9" value="13" /> My real friends usually ignore me. <br />
+                <input type="radio" name="q9" value="14" /> My "real" friends actually dislike me... <br />
+                <input type="radio" name="q9" value="15" /> I love my real friends! I want to put them in my pocket and keep them with me forever! <br />
+                <input type="radio" name="q9" value="16" /> ...What real friends? <br />
+                </li><br />
+                <li>
+                <b>Oh no! A Ninetales' curse has turned you into a Pokemon! You've been cast out of your home and forced to live in the wild. How do you pass the time?</b><br />
+                <input type="radio" name="q10" value="1" /> I guess I'd just go get food and find shelter, and that sort of thing. <br />
+                <input type="radio" name="q10" value="10" /> I'd wanna explore! <br />
+                <input type="radio" name="q10" value="5" /> I'd probably go look for some friends... <br />
+                <input type="radio" name="q10" value="7" /> Heh. I'd try out my battling skills. <br />
+                <input type="radio" name="q10" value="8" /> Just sleep, I guess. <br />
+                <input type="radio" name="q10" value="12" /> I'd take the chance to study up on and learn all about Pokemon from their level! <br />
+                <input type="radio" name="q10" value="14" /> Gonna go hunt some Ninetales. She's gonna be No-tails soon. <br />
+                <input type="radio" name="q10" value="11" /> ...Implying it would be any different? I'd find some way to still be on the computer! <br />
+                </li><br />
+                <li>
+                <b>You just saw some other Pokemon in the area. How do you react to them?</b><br />
+                <input type="radio" name="q11" value="17" /> I'd just ignore them. <br />
+                <input type="radio" name="q11" value="9" /> I'd just walk away... Don't want to deal with it. <br />
+                <input type="radio" name="q11" value="12" /> I'd run, not walk. I'm not good with people. ...Or Pokemon as the case may be. <br />
+                <input type="radio" name="q11" value="13" /> I'd probably just watch from afar. <br />
+                <input type="radio" name="q11" value="6" /> I'd probably watch from a distance, but I'd be secretly hoping they saw me and talked to me... <br />
+                <input type="radio" name="q11" value="2" /> Obviously I'd go up to them. <br />
+                <input type="radio" name="q11" value="4" /> I'd march up to them and introduce myself! <br />
+                <input type="radio" name="q11" value="15" /> Who needs introductions? I'd just glomp them straight away! :D <br />
+                </li><br />
+                <li>
+                <b>Suddenly the other wild Pokemon get into a fight! It's your first time seeing a battle from a Pokemon's point of view; how does it make you feel?</b><br />
+                <input type="radio" name="q12" value="2" /> This is invigorating! <br />
+                <input type="radio" name="q12" value="6" /> It's cool, but kinda scary to see from a Pokemon's point of view. <br />
+                <input type="radio" name="q12" value="11" /> ...I'm forced to wonder how this is considered ethical. <br />
+                <input type="radio" name="q12" value="3" /> I was a little worried at first, but it seems like it's okay. <br />
+                <input type="radio" name="q12" value="9" /> I just pity the loser. <br />
+                <input type="radio" name="q12" value="13" /> It's just a fight... No big deal. <br />
+                <input type="radio" name="q12" value="10" /> It looks fun. I kinda wanna try! <br />
+                <input type="radio" name="q12" value="7" /> ...I could do better than that guy. <br />
+                </li><br />
+                <li>
+                <b> After one of the Pokemon is knocked out, a human finds it, and takes it away. Another human captures the Pokemon that defeated it. As a Pokemon, how do you feel about Trainers?</b><br />
+                <input type="radio" name="q13" value="8" /> They're kinda scary... <br />
+                <input type="radio" name="q13" value="5" /> I think I'd like a Trainer! It'd be nice to have company. <br />
+                <input type="radio" name="q13" value="11" /> Speaking of things that aren't ethical, how is capturing Pokemon moral? ._. <br />
+                <input type="radio" name="q13" value="13" /> I guess it depends on the Trainer. <br />
+                <input type="radio" name="q13" value="4" /> brb finding my own trainer <br />
+                <input type="radio" name="q13" value="15" /> Pshaw, I don't need a Trainer to be awesome. <br />
+                <input type="radio" name="q13" value="17" /> I don't think any differently of them. I was one before; nothing about Trainers as a whole has changed. <br />
+                <input type="radio" name="q13" value="10" /> I'm sorry that I ever was one before. It's cruel! <br />
+                </li><br />
+                <li>
+                <b> Suddenly you see a Pokemon of your same species, and they're actually really cute! What do you do?</b><br />
+                <input type="radio" name="q14" value="2" /> I'd go up and introduce myself. <br />
+                <input type="radio" name="q14" value="15" /> Again, skip the introductions! Glompies taim! <br />
+                <input type="radio" name="q14" value="8" /> They'd think I was weird since I was a human before... I'd probably just keep my distance... <br />
+                <input type="radio" name="q14" value="12" /> I wouldn't stick around to embarrass myself... <br />
+                <input type="radio" name="q14" value="5" /> I'd bring them some food as a gift! <br />
+                <input type="radio" name="q14" value="16" /> ...I'd just ignore them.<br />
+                <input type="radio" name="q14" value="14" /> I'd tease them~ <br />
+                <input type="radio" name="q14" value="17" /> 'Cute' is a shallow judgment. Anyway, I wouldn't really care. <br />
+                </li><br />
+                <li>
+                <b> Uh oh, suddenly a Houndoom appears and starts bullying the cute Pokemon. What will you do?</b><br />
+                <input type="radio" name="q15" value="12" /> Tactical retreat!<br />
+                <input type="radio" name="q15" value="4" /> I'd jump out and boldly defend the Pokemon! For glory! <br />
+                <input type="radio" name="q15" value="3" /> Just wait for the right time, and once there's an opening, attack Houndoom. <br />
+                <input type="radio" name="q15" value="10" /> I probably can't out-power it, but I can at least taunt Houndoom away from the other Pokemon. <br />
+                <input type="radio" name="q15" value="14" /> I'll pretend to be on Houndoom's side. Earn its trust, and then attack when its guard is down. <br />
+                <input type="radio" name="q15" value="7" /> No glory. No tricks. No wasting time. Let's get on with the fight. <br />
+                <input type="radio" name="q15" value="11" /> I would offer to help the Pokemon, and act only if they requested it. Otherwise it would be rude. <br />
+                <input type="radio" name="q15" value="17" /> Not my problem. <br />
+                </li><br />
+                <li>
+                <b> The good news is Houndoom backed off of the cute Pokemon... But now he's onto you! How do you react?</b><br />
+                <input type="radio" name="q16" value="1" /> Aaaah! But at least the other Pokemon is okay! <br />
+                <input type="radio" name="q16" value="8" /> Forget this, Houndoom can go back to tormenting the other Pokemon; just leave me alone! <br />
+                <input type="radio" name="q16" value="7" /> That's right, now this is a real fight. Bring it on. <br />
+                <input type="radio" name="q16" value="6" /> Offer Houndoom to do with me what he will, as long as he leaves the other Pokemon alone. <br />
+                <input type="radio" name="q16" value="5" /> I'd see if the other Pokemon was okay enough to help me. We'll beat Houndoom together! <br />
+                <input type="radio" name="q16" value="9" /> Sticks and stones will break my bones, but Houndoom's too weak to hurt me. <br />
+                <input type="radio" name="q16" value="11" /> I'd like to get it to calm down, and then have a long talk with it to work out its aggression. <br />
+                <input type="radio" name="q16" value="10" /> Duh, run! <br />
+                </li><br />
+                <li>
+                <b> One way or another, Houndoom is gone, but after being attacked, a wild Trainer appears! He sees you're weak, and captures you! How do you feel?</b><br />
+                <input type="radio" name="q17" value="17" /> F. M. L. <br />
+                <input type="radio" name="q17" value="15" /> New friend, wheeee~ <br />
+                <input type="radio" name="q17" value="13" /> I just hope that he's a good trainer. <br />
+                <input type="radio" name="q17" value="10" /> I think I'll miss the wild :c <br />
+                <input type="radio" name="q17" value="9" /> The Trainer is, whatever, but let me out of my Pokeball. It's cramped in here. <br />
+                <input type="radio" name="q17" value="3" /> I guess it'll be nice to have some company. <br />
+                <input type="radio" name="q17" value="2" /> It's a great opportunity to get stronger! <br />
+                <input type="radio" name="q17" value="14" /> First chance I get, I'm running away. <br />
+                </li><br />
+                <li>
+                <b> Your new Trainer, Elliot, decides he wants to you to get stronger, so he goes out and challenges the first trainer he sees! The opposing Trainer sends out a strong looking Swampert. In fact, it seems to be a good 20-30 levels stronger than you! How do you react?</b><br />
+                <input type="radio" name="q18" value="1" /> ...I guess I'll do my best! <br />
+                <input type="radio" name="q18" value="6" /> Um, can I just raise the white flag now? <br />
+                <input type="radio" name="q18" value="16" /> ...I'm not doing this. Bye. <br />
+                <input type="radio" name="q18" value="4" /> Level doesn't matter! Let's gogogogogo! <br />
+                <input type="radio" name="q18" value="7" /> A good trainer can overcome level differences; so can a good Pokemon. <br />
+                <input type="radio" name="q18" value="13" /> I'll trust in my trainer and hope he has a plan. <br />
+                <input type="radio" name="q18" value="12" /> I'd ask how many potions he has for me... <br />
+                <input type="radio" name="q18" value="17" /> Elliot's an idiot. <br />
+                </li><br />
+                <li>
+                <b> Understandably, your battle with Swampert doesn't go so well. Elliot thinks that you need to fight some weaker Pokemon to get stronger. The next thing you know you're up against a baby Skitty! Elliot commands you to go all out. What do you do?</b><br />
+                <input type="radio" name="q19" value="9" /> Kill it. Sucks to suck. <br />
+                <input type="radio" name="q19" value="5" /> I refuse to attack! <br />
+                <input type="radio" name="q19" value="6" /> ...I'll attack, but I'll go easy on it. <br />
+                <input type="radio" name="q19" value="8" /> I'll kill it. But I'll feel terrible about it. <br />
+                <input type="radio" name="q19" value="17" /> This is pointless and stupid. I'd turn around and attack Elliot for being dumb. <br />
+                <input type="radio" name="q19" value="14" /> I'd kill it and secretly enjoy it. >:D <br />
+                <input type="radio" name="q19" value="16" /> I'll pretend to attack it without hesitation, but I'd purposely miss the attacks so that it's okay. <br />
+                <input type="radio" name="q19" value="13" /> I will do as I am told. <br />
+                </li><br />
+                <li>
+                <b> Elliot finally gets a sense of your power level and starts matching you against more appropriate opponents. Now you're in a battle with a Persian. It's weak, and one more hit will KO it! But suddenly, Persian's Slash scores a critical hit, and you're KO'd instead! How do you feel?</b><br />
+                <input type="radio" name="q20" value="2" /> I'm mad at myself for failing... <br />
+                <input type="radio" name="q20" value="16" /> I'm pissed at Persian for being a c-...at.<br />
+                <input type="radio" name="q20" value="17" /> It happens. <br />
+                <input type="radio" name="q20" value="4" /> I might feel sorry for myself for a while, but I'd get over it. <br />
+                <input type="radio" name="q20" value="14" /> Gonna hunt me some Persian. Their fur will make a nice coat. <br />
+                <input type="radio" name="q20" value="7" /> I'll just do better next time. <br />
+                <input type="radio" name="q20" value="3" /> Elliot should have realized the chance of that happening, however, he will learn in time. <br />
+                <input type="radio" name="q20" value="15" /> I feel like... ice cream. Do we have any? Please? <br />
+                </li><br />
+                <li>
+                <b> Elliot just picked up a brand new TM he wants to teach you. At first you're interested what cool kind of move you might learn- but it turns out that he wants you to learn Explosion! How do you feel about this?</b><br />
+                <input type="radio" name="q21" value="13" /> ...The trainer knows best. <br />
+                <input type="radio" name="q21" value="8" /> ...you're kidding, right? <br />
+                <input type="radio" name="q21" value="11" /> Speaking of things that are immoral... <br />
+                <input type="radio" name="q21" value="12" /> Okay, I understand needing a power attack, but isn't this over the top? <br />
+                <input type="radio" name="q21" value="16" /> Clearly Elliot doesn't care about my well-being. <br />
+                <input type="radio" name="q21" value="17" /> Elliot may or may not care, but he's denser than lead. <br />
+                <input type="radio" name="q21" value="10" /> I'm not learning this! I refuse. <br />
+                <input type="radio" name="q21" value="4" /> BOOOOOOOOOOOOOOOOOM!!!!! <br />
+                </li><br />
+                <li>
+                <b> Elliot just caught a low level Gothita! He tries her out in a few battles, fortunately around her own level, but she's not doing too well. In fact, she can hardly get one or two hits in before she's KO'd. What do you think of this?</b><br />
+                <input type="radio" name="q22" value="1" /> She'll be fine once she evolves. <br />
+                <input type="radio" name="q22" value="17" /> I think Elliot's an idiot, and we're all doomed to mediocrity. <br />
+                <input type="radio" name="q22" value="5" /> Maybe I can work with her personally; try to help her out. <br />
+                <input type="radio" name="q22" value="2" /> She'll be fine. I have to focus on my own battling. <br />
+                <input type="radio" name="q22" value="7" /> She needs to step up and commit herself to the challenge. <br />
+                <input type="radio" name="q22" value="9" /> She's a crybaby. <br />
+                <input type="radio" name="q22" value="3" /> Everyone starts somewhere. <br />
+                <input type="radio" name="q22" value="10" /> I might give her a few tips, but I'll let her figure it out for herself. <br />
+                </li><br />
+                <li>
+                <b> An Ace Trainer named Brian has appeared and challenged Elliot to a Double Battle! It's his first one, and yours too. First he sends you out, along with Gothita! You know Gothita won't survive more than a single attack. What do you do??</b><br />
+                <input type="radio" name="q23" value="2" /> ...Well, looks like this is a 1v2 battle for me. <br />
+                <input type="radio" name="q23" value="1" /> I'd hope Elliot has a plan... <br />
+                <input type="radio" name="q23" value="5" /> I'll protect Gothita! Even at my own risk! <br />
+                <input type="radio" name="q23" value="13" /> I'll do as I am told to do. <br />
+                <input type="radio" name="q23" value="11" /> Protecting Gothita will lag our team behind. The best strategy is to KO the enemy as quickly as possible- before they can get to her. <br />
+                <input type="radio" name="q23" value="3" /> This is okay, Gothita will make me look awesome by comparison! <br />
+                <input type="radio" name="q23" value="16" /> ...Why should I even bother at this point? <br />
+                <input type="radio" name="q23" value="14" /> Kill me now. In fact, where's that Explosion TM? <br />
+                </li><br />
+                <li>
+                <b> Fortunately, Elliot realizes Gothita's in trouble. He recalls her and sends out his very first Pokemon- a high level Luxray! It's obviously got you out-powered. How do you feel?</b><br />
+                <input type="radio" name="q24" value="4" /> ...Darn, now I'm the one that looks weak. <br />
+                <input type="radio" name="q24" value="7" /> The Luxray is a show off. However, it'll be an effective partner for the battle. <br />
+                <input type="radio" name="q24" value="1" /> Well, now I won't get overrun, at least. <br />
+                <input type="radio" name="q24" value="17" /> Better, but Elliot's still dense. <br />
+                <input type="radio" name="q24" value="9" /> Luxray schmuxray, I'm just glad the crybaby's gone. <br />
+                <input type="radio" name="q24" value="3" /> It's okay for the battle, but Gothita won't get stronger that way. <br />
+                <input type="radio" name="q24" value="15" /> A new partner! Now we can have all kinds of fun! <br />
+                <input type="radio" name="q24" value="12" /> Oi. Well, I'll try to keep up! <br />
+                </li><br />
+                <li>
+                <b> The battle rages on! You and Luxray are up against Brian's Starmie and Skarmory. Elliot notices that they're both weak to Electric attacks, so he commands Luxray to hit them both at once with a Discharge attack. Luxray glances at you, but charges up for the hit- Elliot hasn't even considered that you would be attacked also! How do you feel?</b><br />
+                <input type="radio" name="q25" value="5" /> Aaaah, please think of me! QQ <br />
+                <input type="radio" name="q25" value="13" /> ...Do as you must. <br />
+                <input type="radio" name="q25" value="14" /> Looks like we're adding Luxray to the hunted list... <br />
+                <input type="radio" name="q25" value="17" /> I feel like my trainer is a dolt. If I haven't made that clear already. <br />
+                <input type="radio" name="q25" value="8" /> So I don't matter then. Cool. <br />
+                <input type="radio" name="q25" value="1" /> Uhhhh, brace for impact!...? <br />
+                <input type="radio" name="q25" value="10" /> ...Running. I feel like running.<br />
+                <input type="radio" name="q25" value="2" /> Hit me with that and I won't ever forgive Elliot OR Luxray! <br />
+                </li><br />
+                <li>
+                <b> Starmie, Skarmory and yourself all manage to survive the Discharge. Both of them attack Luxray, and now all four Pokemon are really weak! Elliot, thinking that Discharge worked well, commands you to use an attack to hit both Starmie and Skarmory at once again- but you know that if you do, Luxray will be KO'd too. What do you do?</b><br />
+                <input type="radio" name="q26" value="7" /> A win is a win. Let's go for the kill. <br />
+                <input type="radio" name="q26" value="13" /> I will do as I am told. <br />
+                <input type="radio" name="q26" value="10" /> I'm not going to hit my partner! I'll just attack one of them. <br />
+                <input type="radio" name="q26" value="8" /> I'll attack, even though I don't agree with it... <br />
+                <input type="radio" name="q26" value="3" /> Luxray can suffer the loss to his personal pride. In the end, he still contributed greatly to the victory. <br />
+                <input type="radio" name="q26" value="5" /> I'd sincerely apologize to Luxray before anything... <br />
+                <input type="radio" name="q26" value="14" /> Done. We call that revenge for the Discharge. Die, Luxray. <br />
+                <input type="radio" name="q26" value="12" /> ...Wouldn't it make more sense to use an area-hit attack that only affects enemies? <br />
+                </li><br />
+                <li>
+                <b> Luxray, Starmie and Skarmory are all knocked out- Elliot wins the battle! But he's mad at you for hurting his prized Luxray. He's even talking about releasing you because of it! How do you react?</b><br />
+                <input type="radio" name="q27" value="6" /> How is that fair at all? <br />
+                <input type="radio" name="q27" value="1" /> Isn't that a bit dramatic? But if I'm really that bad... <br />
+                <input type="radio" name="q27" value="5" /> I'm sorry! I don't want to be released, please, I'll do better... <br />
+                <input type="radio" name="q27" value="8" /> ...Sorry, I thought that was what you told me to do. <br />
+                <input type="radio" name="q27" value="2" /> I'm gonna be pissed at him! He can go right ahead and release me after pulling something like that! <br />
+                <input type="radio" name="q27" value="16" /> Release me, then. You'll be better off anyway. <br />
+                <input type="radio" name="q27" value="11" /> It's not a big deal; Luxray simply needs to attend a Pokemon Center. Please, calm down. <br />
+                <input type="radio" name="q27" value="14" /> You're going to release me? Sweet jesus has mercy, YES! <br />
+                </li><br />
+                <li>
+                <b> On that note, how do you feel about Elliot in general?</b><br />
+                <input type="radio" name="q28" value="11" /> Well, he has a lot left to learn. <br />
+                <input type="radio" name="q28" value="5" /> Uh, he's a good person... But I feel sorry for Luxray and Gothita. <br />
+                <input type="radio" name="q28" value="3" /> He means well, he simply lacks the maturity to act effectively. <br />
+                <input type="radio" name="q28" value="6" /> I feel like kill me now. <br />
+                <input type="radio" name="q28" value="15" /> I can help him be better! He just needs more MAGIC in his life! :D <br />
+                <input type="radio" name="q28" value="17" /> If it hasn't already been made clear, I think he's an idiot. <br />
+                <input type="radio" name="q28" value="8" /> There are better trainers out there, but I'd rather not be alone... <br />
+                <input type="radio" name="q28" value="14" /> I hope he falls off a cliff and dies. <br />
+                </li><br />
+                <li>
+                <b> Elliot leaves you and Gothita out of your Pokeballs and runs away to take Luxray to the Pokemon Center. He said he needs time away to think. After being mad at you, and disappointed in Gothita's poor performance, it seems like he might abandon both of you. As Elliot leaves, Gothita begins to cry. What do you do?</b><br />
+                <input type="radio" name="q29" value="9" /> Gothita will shut up, or I will shut her up. <br />
+                <input type="radio" name="q29" value="5" /> I'd comfort her! Poor thing is scared and confused; she needs a friend. <br />
+                <input type="radio" name="q29" value="1" /> ...I'll just wait for Elliot. <br />
+                <input type="radio" name="q29" value="16" /> I'm done. I'll leave without another word. <br />
+                <input type="radio" name="q29" value="10" /> I'd leave, but I'd offer Gothita to come with me. <br />
+                <input type="radio" name="q29" value="11" /> I'd talk with Gothita and explain what's going on. Maybe I'd work with her to help her feel better. <br />
+                <input type="radio" name="q29" value="14" /> We can talk smack about Elliot while he's gone, and it might cheer her up! >:D <br />
+                <input type="radio" name="q29" value="13" /> I would simply insist that she trust in her Trainer. <br />
+                </li><br />
+                <li>
+                <b> Before Elliot comes back, who should find you but Brian, the Ace Trainer from before! Wondering how Elliot's Pokemon were left alone, he takes you and Gothita to find Elliot. Elliot's calmed down, and the two of them get to talking. After a little bit, Brian says that he was very impressed with your preformance in that battle, and he's interested in trading his own Starmie for you! Elliot thinks it over, and accepts! How do you feel?</b><br />
+                <input type="radio" name="q30" value="4" /> I'm being traded?! What'd I do wrong? D: <br />
+                <input type="radio" name="q30" value="17" /> Brian seems competent enough. I'd be glad to have someone who's not a moron. <br />
+                <input type="radio" name="q30" value="2" /> I'm fine with this, but I feel bad for that Starmie. <br />
+                <input type="radio" name="q30" value="12" /> A new Trainer! I'd be excited, but nervous... <br />
+                <input type="radio" name="q30" value="5" /> I'm not concerned about myself... If I'm gone, who will look out for Gothita? <br />
+                <input type="radio" name="q30" value="15" /> New friends! But I'll miss Elliot a lot. Q~Q <br />
+                <input type="radio" name="q30" value="7" /> Although Elliot is a poor standard, I worry about Brian's effectiveness as well. <br />
+                <input type="radio" name="q30" value="16" /> ...Can we go back to the part where I'm being released rather than traded about like property? <br />
+                </li><br />
+                <li>
+                <b> It's been a few days since you've been with Brian. He's a much more stable, mature Trainer, but his methods are very different from Elliot's. All of his Pokemon go through a daily routine of specific repetitions and technique-focusing exercises. For instance, Skarmory is to practice its Brave Bird attack's accuracy by landing the move exactly on a target 30 times in a row. You later find out that this is part of what is called EV Training. Brian is very strict about it, and you can't seem to make any progress with your excercises. How do you feel about Brian's training?</b><br />
+                <input type="radio" name="q31" value="6" /> This is brutal! x.x Send me back to Elliot! <br />
+                <input type="radio" name="q31" value="8" /> This is repetitive and useless and annoying and I hate it. <br />
+                <input type="radio" name="q31" value="3" /> It may be tedious, but I'm sure that in the long run, it'll be worth it. <br />
+                <input type="radio" name="q31" value="13" /> I will do as I am told. <br />
+                <input type="radio" name="q31" value="10" /> I refuse to partake in this rubbish! <br />
+                <input type="radio" name="q31" value="4" /> The training was fun! ...At first... Now? I quit. <br />
+                <input type="radio" name="q31" value="14" /> If this doesn't start producing some results soon, I'm running away. <br />
+                <input type="radio" name="q31" value="7" /> This structure and practice is exactly what I've been waiting for. <br />
+                </li><br />
+                <li>
+                <b> After some time, Brian decides that he's going to take on a Gym. He sends you out as the glass doors to the Gym's entrance slide open, and tells you that he's going to be counting on you for this battle. How do you feel?</b><br />
+                <input type="radio" name="q32" value="2" /> Your trust isn't misplaced! <br />
+                <input type="radio" name="q32" value="3" /> I look forward to it. Can't say much more than that. <br />
+                <input type="radio" name="q32" value="6" /> ...Nervous! Aaaah, pressure! <br />
+                <input type="radio" name="q32" value="4" /> I can't wait to show off my stuff against an opponent of that calibur! <br />
+                <input type="radio" name="q32" value="1" /> I'm anxious, but, it's not ALL on me, right? <br />
+                <input type="radio" name="q32" value="12" /> I'm not sure I'm ready... <br />
+                <input type="radio" name="q32" value="16" /> Show me to the victi- I mean... Leader. <br />
+                <input type="radio" name="q32" value="9" /> This is going to be fun... <br />
+                </li><br />
+                <li>
+                <b> One ferocious Gym battle later- Unfortunately, Brian was defeated. You and his team all did your bests, but the leader was just too much. Brian is feeling pretty down on that after all his training he couldn't win. How do you respond?</b><br />
+                <input type="radio" name="q33" value="11" /> It's just a loss. You can always try again. <br />
+                <input type="radio" name="q33" value="9" /> Well it wasn't my fault. Brian needs to figure out if it was him or his training that screwed up the battle. <br />
+                <input type="radio" name="q33" value="3" /> I'd redouble my training efforts, for his sake. <br />
+                <input type="radio" name="q33" value="2" /> I'd redouble my training efforts, as a personal matter. I won't lose twice! <br />
+                <input type="radio" name="q33" value="4" /> I'm sorry I failed! QQ <br />
+                <input type="radio" name="q33" value="7" /> I soooo could have had that. Rematch tomorrow, right? <br />
+                <input type="radio" name="q33" value="1" /> I don't think I could respond with anything after collapsing from nerves! <br />
+                <input type="radio" name="q33" value="15" /> Sooooo... is it just me or was that gym leader REALLY COOL? <br />
+                </li><br />
+                <li>
+                <b> After everything, what do you miss the most about being human?</b><br />
+                <input type="radio" name="q34" value="10" /> Being allowed to make my own decisions. <br />
+                <input type="radio" name="q34" value="6" /> Being able to speak... <br />
+                <input type="radio" name="q34" value="12" /> Calling the shots instead of doing the fighting... <br />
+                <input type="radio" name="q34" value="7" /> Being a Pokemon is fun. It's much more invigorating to do the actual fighting. <br />
+                <input type="radio" name="q34" value="8" /> ...I miss other people. <br />
+                <input type="radio" name="q34" value="15" /> Pshaw, I miss nothing! Being a Pokemon is just like, aweshum. <br />
+                <input type="radio" name="q34" value="3" /> Each side has its weaknesses and strengths. I can deal with either. <br />
+                <input type="radio" name="q34" value="16" /> ...The internet. <br />
+                </li><br />
+                <li>
+                <b> Back to your human self! Which of these traits best describes you?</b><br />
+                <input type="radio" name="q35" value="7" /> Independent, Strong-Willed, Confident <br />
+                <input type="radio" name="q35" value="6" /> Reserved, Timid, High-Strung <br />
+                <input type="radio" name="q35" value="17" /> Self-assured, Independent, Rational <br />
+                <input type="radio" name="q35" value="1" /> Light-Hearted, Playful, Well-Rounded <br />
+                <input type="radio" name="q35" value="4" /> Energetic, Attention-Seeking, Flighty <br />
+                <input type="radio" name="q35" value="8" /> Unique, Insecure, Submissive <br />
+                <input type="radio" name="q35" value="9" /> Prideful, Tough, Solitary <br />
+                <input type="radio" name="q35" value="16" /> Isolatory, Mysterious, Reclusive <br />
+                <input type="radio" name="q35" value="10" /> Free-Thinking, Spirited, Stubborn <br />
+                <input type="radio" name="q35" value="11" /> Intelligent, Intrapersonal, Creative <br />
+                <input type="radio" name="q35" value="12" /> Intellectual, Curious, Timid <br />
+                <input type="radio" name="q35" value="2" /> Passionate, Ambitious, Quick-Tempered <br />
+                <input type="radio" name="q35" value="15" /> Unique, Confident, Imaginative <br />
+                <input type="radio" name="q35" value="5" /> Peaceful, Caring, Compassionate <br />
+                <input type="radio" name="q35" value="14" /> Mischeivous, Misunderstood, Humorous <br />
+                <input type="radio" name="q35" value="3" /> Understanding, Connected, Accepting <br />
+                <input type="radio" name="q35" value="13" /> Steadfast, Loyal, Obedient <br />
+                </li><br />
+                <li>
+                <b> Final question! Just for our records to improve this quiz- What is your favorite type?</b><br />
+                <input type="radio" name="q36" value="1" /> Normal <br />
+                <input type="radio" name="q36" value="2" /> Fire <br />
+                <input type="radio" name="q36" value="3" /> Water <br />
+                <input type="radio" name="q36" value="4" /> Electric <br />
+                <input type="radio" name="q36" value="5" /> Grass <br />
+                <input type="radio" name="q36" value="6" /> Ice <br />
+                <input type="radio" name="q36" value="7" /> Fighting <br />
+                <input type="radio" name="q36" value="8" /> Poison <br />
+                <input type="radio" name="q36" value="9" /> Ground <br />
+                <input type="radio" name="q36" value="10" /> Flying <br />
+                <input type="radio" name="q36" value="11" /> Psychic <br />
+                <input type="radio" name="q36" value="12" /> Bug <br />
+                <input type="radio" name="q36" value="14" /> Rock <br />
+                <input type="radio" name="q36" value="14" /> Ghost <br />
+                <input type="radio" name="q36" value="15" /> Dragon <br />
+                <input type="radio" name="q36" value="16" /> Dark <br />
+                <input type="radio" name="q36" value="17" /> Steel <br />
+                </li>
+                </ol>
+
+<input type="submit" value="What Type Am I?" />
+</form>
+            </td></tr></table>
+
+
+            </td></tr><tr><td class="foottile">
+</td></tr><tr><td height="42px">
+
+
+            <br></span>
+</div>
+    </div>
+    <script src="../script/modal_boxes.js"></script>
+    <script src="script/login_validation.js"></script>
+    <script src="../script/register_validation.js"></script>
+</body>
+</html>
