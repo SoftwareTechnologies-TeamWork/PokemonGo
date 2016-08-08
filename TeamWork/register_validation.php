@@ -12,6 +12,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
 
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $hashed_password = md5($password);
     $confirm_password = $_POST['confirm_password'];
     $email = $_POST['email'];
     $fullname = $_POST['full_name'];
@@ -40,7 +41,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['conf
         $queryString = "INSERT INTO users (username, password, email, fullname) VALUES (?, ?, ?, ?)";
 
         $query = $db->query($queryString);
-        $query->bind_param("ssss", $username, $password, $email, $fullname);
+        $query->bind_param("ssss", $username, $hashed_password, $email, $fullname);
         $query->execute();
 
         if ($query->affected_rows == 0) {
