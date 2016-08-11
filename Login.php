@@ -1,4 +1,7 @@
 <?php
+require_once('Register.php');
+require_once('Database.php');
+
 define('DB_SERVER', 'localhost:3036');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'rootpassword');
