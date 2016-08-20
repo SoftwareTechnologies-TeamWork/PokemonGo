@@ -31,26 +31,18 @@ $(function() {
         console.log(score);
         console.log(currentQuestion);
 
-        /*$.ajax({
+        $.ajax({
             type: "POST",
-            url: "quiz.php",
+            url: "quiz_ajax.php",
             dataType: "text",
             data: {
               currentQuestion: currentQuestion,
               score: score
             },
-            success: function(data) {
-                alert(data);
+            success: function() {
+                alert("success");
                 location.reload();
             }
-        });*/
-
-        $.post("quiz_ajax.php", {
-            score: score,
-            currentQuestion: currentQuestion
-        }, function(data) {
-            alert("success");
-            location.reload();
         });
     });
 });
