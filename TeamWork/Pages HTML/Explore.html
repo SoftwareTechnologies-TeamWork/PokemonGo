@@ -25,10 +25,10 @@
                 <li><a href="layout_pokemon.html">Home</a></li>
                 <li><a href="Info.html">Info</a></li>
                 <li><a href="Forum.html">Forum</a></li>
-                <li><a href="Quiz.html">Quiz</a></li>
-                <li><a href="TheDangers.html">The dangers..</a></li>
+                <li><a href="../PHP/Quiz.php">Quiz</a></li>
+                <li><a href="../PHP/TheDangers.php">The dangers..</a></li>
                 <li><a href="Explore.html" class="current">Explore</a></li>
-                <li><a href="Pokedex.html">Pokedex</a></li>
+                <li><a href="../PHP/Pokedex.php">Pokedex</a></li>
                 <li><a href="TeamsAndGyms.html">Teams and gyms</a></li>
                 <li><a href="#" class="open_modal">Login</a></li>
                 <li><a href="#" id="clicked" class="open_modal">Register</a></li>
@@ -70,25 +70,25 @@
                     <form method="post" id="register_form">
                         <div class="register_menu_item">
                             <label class="label" for="username">Username:</label><br>
-                            <input type="text" name="username" id="register_username" placeholder="Username"/>
+                            <input type="text" name="username" id="username" placeholder="Username"/>
                         </div>
                         <div class="register_menu_item">
                             <label class="label" for="email">Email:</label><br>
-                            <input type="text" name="email" id="register_email" placeholder="Email"/>
+                            <input type="text" name="email" id="email" placeholder="Email"/>
                         </div>
 
                         <div class="register_menu_item">
                             <label class="label" for="password">Password:</label><br>
-                            <input type="password" name="password" id="register_password" placeholder="Password"/>
+                            <input type="password" name="password" id="password" placeholder="Password"/>
                         </div>
                         <div class="register_menu_item">
                             <label class="label" for="confirm_password">Confirm Password:</label><br>
-                            <input type="password" name="confirm_password" id="register_confirm_password" placeholder="Confirm password"/>
+                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password"/>
                         </div>
 
                         <div class="register_menu_item">
                             <label class="label" for="full_name">Full Name:</label><br>
-                            <input type="text" name="full_name" id="register_fullname" placeholder="Full Name"/>
+                            <input type="text" name="full_name" id="full_name" placeholder="Full Name"/>
                         </div>
                         <div class="register_menu_item">
                             <input id="register_submit" type="submit" value="Register"><br>
@@ -99,20 +99,160 @@
         </div>
 
         <?php>
-<div id="content">
-        <span style="font-family:Cursive;
-        font-size:18px;
-        font-style:normal;
-        font-weight:normal;
-        color:white;">
-            <p><br>Левски София е български футболен клуб от град София, основан на 24 май 1914 година
-                от група млади студенти, и е кръстен на българския революционер и национален герой Васил Левски.
-                Откакто е основан, Левски София е единственият отбор, който през всичките 93 футболни шампионата на България,
-                е играл или в първа Софийска футболна дивизия, или в Националната „А“ група. Левски има спечелени общо 73
-                големи национални трофеи (национален рекорд): 26 пъти шампион на страната, 25 Национални купи, три Суперкупи на България,
-                единадесет пъти Първенство на София, три Купи на Съветската армия, една Купа на НРБ и четири пъти Купата Улпия Сердика. В европейските клубни
-                турнири Левски е достигал три пъти четвъртфинал в турнира за Купата на националните купи през сезони 1969/1970, 1976/1977, 1986/1987 и два пъти в турнира за Купата на УЕФА
-                – 1975/1976, 2005/2006. Левски е първият български отбор, който участва в групите на Европейската шампионска лига през сезон 2006/2007.</p><br></span>
+<div id="content"><br>
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color: forestgreen; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px"> Get up, get out and explore!</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore1.jpg" width=800px height=500px; align="left" border="20 "></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color: forestgreen"> Get on your feet and step outside to find and catch wild Pokémon. Explore cities and towns where you live—and even around
+                the globe—to capture as many Pokémon as you can. As you walk through the real world, your smartphone will vibrate to let you know you're near a Pokémon.
+
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"> <h5 style="width: 800px;color: forestgreen; margin-left: 30px; text-align: center">For safety's sake, never play Pokémon GO when you're on your bike, driving a car, riding a hoverboard, or anything else where you should be
+                paying attention, and of course never wander away from your parents or your group to catch a Pokémon.</h5></p>
+
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color: cornflowerblue; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px"> Use the map</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore2.jpg" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color: cornflowerblue">The map is your main view while playing Pokémon GO, and it is based on the actual real-world map of the streets and pathways where you're standing. The map contains lots of information that's useful when you're exploring. You'll always be in the center of the map. Use it to find PokéStops, Gyms, the location of nearby Pokémon, and more!
+
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: cornflowerblue; margin-left: 30px; text-align: center">PokéStops usually exist at easily identifiable landmarks, such as public art installations or other points of interest.
+            </h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color: darkorange; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px">Encounter Pok&eacute;mon</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore3.png" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color: darkorange">Keep an eye out for glowing
+                    areas called habitats that indicate where you may find Pokémon. You won't always find a Pokémon in a habitat, but the chances are very good. Pokémon love
+                    places like public parks and recreation areas. So get outside and walk around to find more Pokémon!
+               <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: darkorange; margin-left: 30px; text-align: center">Be sure to
+                explore many habitats that show up on your map so you can catch a variety of Pokémon.</h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color:#E5E900; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px">Favored habitats</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore4.jpg" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color:#E5E900">It’s most effective to look for
+                    Pokémon at habitats that match where they're most likely to live. For example, if you’re on the beach or at a pier, you’re more likely to find Water-type Pokémon.
+                    However, if you’re in a desert climate, you would be much less likely to find Water-type Pokémon.<br> You can see the kinds of Pokémon that might be found near
+                    your current location by using the Nearby feature. Note that Pokémon already in your Pokédex will appear in color, while those not in your Pokédex will appear
+                    as dark silhouettes.
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: #E5E900; margin-left: 30px; text-align: center"> If you see
+                     a Pokémon someplace where it might not be safe to capture it (like in a construction site or on private property that you can't get to from the street), don't do it.
+                    There will always be another chance to catch that Pokémon later on!</h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color:#E5E900; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px">Visit Pokéstops</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore5.jpg" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color:#E5E900">Look for PokéStops l
+                    ocated at interesting places, such as public art installations, historical markers, and monuments. You can collect more Poké Balls and other items at
+                    PokéStops, which show up on your map as blue squares. When you’re close enough to a PokéStop to search it, the box on top of the blue square will open.
+                    That's the time to gather items from the PokéStop!
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: #E5E900; margin-left: 30px; text-align: center"> Spin the Photo Disc to gather
+                    items from the PokéStop.</h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color:rebeccapurple; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px">Load up your bag</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore6.png" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color:rebeccapurple">Access your Bag in
+                    the Map view by touching the Poké Ball icon. The kinds of items you'll keep in your Bag include Poké Balls, medicines, Berries, and more. (Pokémon
+                    Eggs will not appear in your Bag.) You can also access your Bag during Pokémon encounters.
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: rebeccapurple; margin-left: 30px; text-align: center"> Each item is
+                accompanied by a description of what it does.</h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
 </div>
     </div>
     <script src="../script/modal_boxes.js"></script>
