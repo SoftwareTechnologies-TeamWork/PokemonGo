@@ -1,0 +1,11 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundWater.jpg");
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color: #99ccff #0000FF #2d41a1;
+    border-width: 20px;
+    color: black;
+    -webkit-text-stroke: 0.5px blue;
+    font-family: Impact;
+}

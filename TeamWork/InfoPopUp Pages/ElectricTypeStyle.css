@@ -1,0 +1,12 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundElectric.jpg");
+    background-size: cover;
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color:#fbca04 #E5E900 #ff9900;
+    border-width: 20px;
+    color: black;
+    -webkit-text-stroke: 0.5px orange;
+    font-family: Impact;
+}

@@ -1,0 +1,12 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundBug.jpg");
+    background-size: 800px 1000px;
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color: #47d147 #339966 #66ff33;
+    border-width: 20px;
+    color: black;
+    -webkit-text-stroke: 0.5px lightgreen;
+    font-family: Impact;
+}

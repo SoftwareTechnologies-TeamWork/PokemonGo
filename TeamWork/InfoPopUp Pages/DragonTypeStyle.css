@@ -1,0 +1,11 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundDragon.jpg");
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color:#ffd633  #ffa31a  #ffb84d;
+    border-width: 20px;
+    color: orange;
+    -webkit-text-stroke: 0.8px black;
+    font-family: Impact;
+}

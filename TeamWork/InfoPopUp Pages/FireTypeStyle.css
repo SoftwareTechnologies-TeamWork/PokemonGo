@@ -1,0 +1,11 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundFire.jpg");
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color: #a33636 #ff0000 #fbca04;
+   border-width: 20px;
+    color: black;
+    -webkit-text-stroke: 0.5px yellow;
+    font-family: Impact;
+}
