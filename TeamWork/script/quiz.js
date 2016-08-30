@@ -33,14 +33,13 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "quiz_ajax.php",
+            url: "../Pages PHP/quiz_ajax.php",
             dataType: "text",
             data: {
               currentQuestion: currentQuestion,
               score: score
             },
             success: function() {
-                alert("success");
                 location.reload();
             }
         });

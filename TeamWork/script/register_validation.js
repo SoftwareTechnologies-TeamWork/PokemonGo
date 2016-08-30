@@ -8,7 +8,7 @@ $(function() {
         let email = $('#register_email').val();
         let fullname = $('#register_fullname').val();
 
-        $.post("register_validation.php", {
+        $.post("../Pages%20PHP/register_validation.php", {
             username: username,
             password: password,
             confirm_password: confirm_password,
@@ -22,7 +22,7 @@ $(function() {
     function onSuccessFunction(data) {
         let errorData = JSON.parse(data);
 
-        if (errorData.length != 1) {
+        if (errorData.length > 1) {
             if (errorData[0] !== "") {
                 $('#register_username').notify(errorData[0], "error");
             }
@@ -43,8 +43,9 @@ $(function() {
                 $('#register_fullname').notify(errorData[4], "error");
             }
         } else {
-            if (errorData[0] !== "") {
+            if (errorData[0] === "success") {
                 $('#register_username').notify(errorData[0], "success");
+                location.reload();
             }
         }
     }

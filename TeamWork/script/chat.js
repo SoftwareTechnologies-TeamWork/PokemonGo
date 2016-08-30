@@ -1,7 +1,7 @@
 $(function() {
     $('#submitmsg').click(function() {
         let clientmsg = $('#usermsg').val();
-        $.post("post.php", {text: clientmsg});
+        $.post("../Pages PHP/post.php", {text: clientmsg});
         $('#usermsg').val("");
         return false;
     });
@@ -9,7 +9,7 @@ $(function() {
     function loadLog() {
         $.ajax({
             type: "POST",
-            url: "load.php",
+            url: "../Pages PHP/load.php",
             cache: false,
             success: function(html) {
                 $('#chatbox').html(html);

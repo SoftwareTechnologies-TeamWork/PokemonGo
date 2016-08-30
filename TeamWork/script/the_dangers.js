@@ -7,7 +7,7 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "get_danger.php",
+            url: "../Pages PHP/get_danger.php",
             dataType: "text",
             data: {
                 currentDanger: currentDanger
