@@ -1,0 +1,12 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundFairy.jpg");
+    background-size: contain;
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color: #ff99ff #ff00ff #cc0099;
+    border-width: 20px;
+    color: pink;
+    -webkit-text-stroke: 0.8px black;
+    font-family: Impact;
+}

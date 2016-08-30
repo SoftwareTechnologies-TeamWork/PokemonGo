@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pokemon GO/INFO</title>
+    <link rel="stylesheet" type="text/css" href="../Pages CSS/ExploreStyle.css">
+    <link rel="stylesheet" type="text/css" href="../Pages%20CSS/modal_boxes.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../script/notify.js"></script>
+</head>
+<body>
+<div id="wrapper_outer">
+    <div id="wrapper_inner">
+
+        <div id="header">
+
+            <div id="site_title">
+                <br><br><br>
+                   <span style="color:#fbca04">Everything you gotta know about</span>
+            </div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="Info.html" id="info">Home</a></li>
+                <li><a href="../Pages%20PHP/Chat.php" id="chat" style="display: none;">Chat</a></li>
+                <li><a href="../Pages%20PHP/Quiz.php" id="quiz" style="display: none;">Quiz</a></li>
+                <li><a href="../Pages%20PHP/TheDangers.php" id="dangers" style="display: none;">The dangers..</a></li>
+                <li><a href="Explore.html" id="explore" class="current" style="display: none;">Explore</a></li>
+                <li><a href="../Pages%20PHP/Pokedex.php" id="pokedex" style="display: none;">Pokedex</a></li>
+                <li><a href="TeamsAndGyms.html" id="teams" style="display: none;">Teams and gyms</a></li>
+                <li><a href="#" id="login" class="open_modal">Login</a></li>
+                <li><a href="#" id="logout" style="display: none;">Logout</a></li>
+                <li><a href="#" id="register" class="open_modal">Register</a></li>
+            </ul>
+
+            <ul>
+                <li style="float: right;" id="logged_as"></li>
+            </ul>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="login_modal" class="modal">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <span class="close">X</span>
+                    <h3>Login information</h3>
+                </div>
+
+                <div class="modal_body">
+                    <form method="post" id="login_form">
+                        <label class="label" for="login_username">Username:</label>
+                        <input type="text" name="login_username" id="login_username" placeholder="Username"><br>
+                        <label class="label" for="login_password">Password:</label>
+                        <input type="password" name="login_password" id="login_password" placeholder="Password"><br>
+                        <input type="submit" value="Login">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Modal-->
+        <div id="register_modal" class="modal">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <span class="close">X</span>
+                    <h3>Register information</h3>
+                </div>
+
+                <div class="modal_body">
+                    <form method="post" id="register_form">
+                        <div class="register_menu_item">
+                            <label class="label" for="username">Username:</label><br>
+                            <input type="text" name="username" id="username" placeholder="Username"/>
+                        </div>
+                        <div class="register_menu_item">
+                            <label class="label" for="email">Email:</label><br>
+                            <input type="text" name="email" id="email" placeholder="Email"/>
+                        </div>
+
+                        <div class="register_menu_item">
+                            <label class="label" for="password">Password:</label><br>
+                            <input type="password" name="password" id="password" placeholder="Password"/>
+                        </div>
+                        <div class="register_menu_item">
+                            <label class="label" for="confirm_password">Confirm Password:</label><br>
+                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password"/>
+                        </div>
+
+                        <div class="register_menu_item">
+                            <label class="label" for="full_name">Full Name:</label><br>
+                            <input type="text" name="full_name" id="full_name" placeholder="Full Name"/>
+                        </div>
+                        <div class="register_menu_item">
+                            <input id="register_submit" type="submit" value="Register"><br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <?php>
+<div id="content"><br>
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color: forestgreen; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px"> Get up, get out and explore!</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore1.jpg" width=800px height=500px; align="left" border="20 "></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color: forestgreen"> Get on your feet and step outside to find and catch wild Pokémon. Explore cities and towns where you live—and even around
+                the globe—to capture as many Pokémon as you can. As you walk through the real world, your smartphone will vibrate to let you know you're near a Pokémon.
+
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"> <h5 style="width: 800px;color: forestgreen; margin-left: 30px; text-align: center">For safety's sake, never play Pokémon GO when you're on your bike, driving a car, riding a hoverboard, or anything else where you should be
+                paying attention, and of course never wander away from your parents or your group to catch a Pokémon.</h5></p>
+
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color: cornflowerblue; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px"> Use the map</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore2.jpg" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color: cornflowerblue">The map is your main view while playing Pokémon GO, and it is based on the actual real-world map of the streets and pathways where you're standing. The map contains lots of information that's useful when you're exploring. You'll always be in the center of the map. Use it to find PokéStops, Gyms, the location of nearby Pokémon, and more!
+
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: cornflowerblue; margin-left: 30px; text-align: center">PokéStops usually exist at easily identifiable landmarks, such as public art installations or other points of interest.
+            </h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color: darkorange; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px">Encounter Pok&eacute;mon</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore3.png" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color: darkorange">Keep an eye out for glowing
+                    areas called habitats that indicate where you may find Pokémon. You won't always find a Pokémon in a habitat, but the chances are very good. Pokémon love
+                    places like public parks and recreation areas. So get outside and walk around to find more Pokémon!
+               <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: darkorange; margin-left: 30px; text-align: center">Be sure to
+                explore many habitats that show up on your map so you can catch a variety of Pokémon.</h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color:#E5E900; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px">Favored habitats</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore4.jpg" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color:#E5E900">It’s most effective to look for
+                    Pokémon at habitats that match where they're most likely to live. For example, if you’re on the beach or at a pier, you’re more likely to find Water-type Pokémon.
+                    However, if you’re in a desert climate, you would be much less likely to find Water-type Pokémon.<br> You can see the kinds of Pokémon that might be found near
+                    your current location by using the Nearby feature. Note that Pokémon already in your Pokédex will appear in color, while those not in your Pokédex will appear
+                    as dark silhouettes.
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: #E5E900; margin-left: 30px; text-align: center"> If you see
+                     a Pokémon someplace where it might not be safe to capture it (like in a construction site or on private property that you can't get to from the street), don't do it.
+                    There will always be another chance to catch that Pokémon later on!</h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color:rebeccapurple; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px">Visit Pokéstops</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore5.jpg" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color:rebeccapurple">Look for PokéStops l
+                    ocated at interesting places, such as public art installations, historical markers, and monuments. You can collect more Poké Balls and other items at
+                    PokéStops, which show up on your map as blue squares. When you’re close enough to a PokéStop to search it, the box on top of the blue square will open.
+                    That's the time to gather items from the PokéStop!
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: rebeccapurple; margin-left: 30px; text-align: center"> Spin the Photo Disc to gather
+                    items from the PokéStop.</h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color:darkred; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px">Load up your bag</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore6.png" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color:darkred">Access your Bag in
+                    the Map view by touching the Poké Ball icon. The kinds of items you'll keep in your Bag include Poké Balls, medicines, Berries, and more. (Pokémon
+                    Eggs will not appear in your Bag.) You can also access your Bag during Pokémon encounters.
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: darkred; margin-left: 30px; text-align: center"> Each item is
+                accompanied by a description of what it does.</h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color:greenyellow; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px">Level up your trainer</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore7.png" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color:greenyellow">Catch as many Pokémon as you can
+                    to earn Experience Points (XP) and increase your Trainer level! Each capture awards XP based on the kind of Pokémon you've caught, whether you've caught the Pokémon
+                    before, and the accuracy of your throw.<br>
+                    At higher levels, you'll have access to stronger items, such as Great Balls, to give you a better shot at catching Pokémon. Keep exploring and
+                    encountering Pokémon to raise your level!
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: greenyellow; margin-left: 30px; text-align: center"> Catch a lot of Pokémon
+                    and watch your level increase!</h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+
+    <table bgcolor=white align="center">
+        <tbody>
+        <tr>
+            <td>
+                <h2 style=" color:darkblue; margin-left: 30px; text-align: center; font-size: 50px;margin-top: 20px">Earn medals</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pic"><img src="../Images/explore8.png" width=800px height=500px align="bottom" border="20"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 30px; width: 800px; font-family: 'Comic Sans MS'; margin-left: 30px; text-align: center; color:darkblue">A wide variety of challenges
+                    are available that highlight many different accomplishments, such as the number of Pokémon you've caught and the distance you've traveled. By completing
+                    these challenges, you'll unlock achievement medals that will appear in your player profile. Try your best to unlock as many medals as you can!
+                    <br><img src="../Images/pokeball.png" width="20px" height="20px"><h5 style="width: 800px;color: darkblue; margin-left: 30px; text-align: center">Check out
+                    your profile page to see your progress on various medals.</h5></p>
+            </td>
+        </tr>
+        </tbody>
+    </table><br>
+</div>
+</div>
+    </div>
+    <script src="../script/modal_boxes.js"></script>
+    <script src="../script/register_validation.js"></script>
+    <script src="../script/login.js"></script>
+    <script src="../script/logout.js"></script>
+    <script src="../script/is_logged_in.js"></script>
+</body>
+</html>

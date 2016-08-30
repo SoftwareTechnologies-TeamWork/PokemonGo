@@ -1,0 +1,11 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundFight.jpg");
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color: #990000 #990000 #cc3300;
+    border-width: 20px;
+    color: #cc2900;
+    -webkit-text-stroke: 0.9px black;
+    font-family: Impact;
+}

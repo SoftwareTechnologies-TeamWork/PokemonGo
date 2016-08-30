@@ -1,0 +1,11 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundPoison.jpg");
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color:#cc0099 #66004d #ff80df;
+    border-width: 20px;
+    color: 	 #e600e6;
+    -webkit-text-stroke: 0.8px black;
+    font-family: Impact;
+}

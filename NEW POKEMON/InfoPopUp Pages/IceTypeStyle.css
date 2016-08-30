@@ -1,0 +1,11 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundIce.jpg");
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color:#0066ff #66a3ff #001f4d;
+    border-width: 20px;
+    color: black;
+    -webkit-text-stroke: 0.5px blue;
+    font-family: Impact;
+}

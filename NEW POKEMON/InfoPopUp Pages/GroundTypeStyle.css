@@ -1,0 +1,11 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundGround.jpg");
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color:#bf8040 #734d26 #261a0d;
+    border-width: 20px;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+    font-family: Impact;
+}

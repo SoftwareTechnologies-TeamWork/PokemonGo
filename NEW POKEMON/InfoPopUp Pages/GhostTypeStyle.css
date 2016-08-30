@@ -1,0 +1,11 @@
+#contentPokemons{
+    background-image: url("../Images/backgroundGhost.jpg");
+    width: 800px;
+    font-size: 25px;
+    border-style: groove;
+    border-color: #6600ff #944dff #4700b3;
+    border-width: 20px;
+    color:    #c61aff;
+    -webkit-text-stroke: 0.9px black;
+    font-family: Impact;
+}
